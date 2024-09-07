@@ -2,11 +2,11 @@
 
 ## Integrantes:
 
-- **Natalia Andrea García Ríos**
-  - Cédula: 1000655184
-
 - **Jeisson Alexis Barrantes Toro**
   - Cédula: 1020484148
+    
+- **Natalia Andrea García Ríos**
+  - Cédula: 1000655184
 
 ## FASE - 1
 ### PASOS PARA EJECUTAR
