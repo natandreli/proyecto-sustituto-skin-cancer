@@ -31,4 +31,4 @@
    ``python train.py --metadata_file "./data/train-metadata.csv" --img_file "./data/training" --model_file "./model/skin_cancer_model.h5" --overwrite_model (opcional)``
    
    
-Recuerda que cada argumento esta direccionado a un path, podrás modificarlo pero debes tener en cuenta que la imagen lo tiene pensado de esa forma.
+Recuerda que cada argumento está direccionado a un path, podrás modificarlo pero debes tener en cuenta que la imagen lo tiene pensado de esa forma.
