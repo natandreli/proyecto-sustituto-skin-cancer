@@ -39,21 +39,21 @@ Recuerda que cada argumento está direccionado a un path, podrás modificarlo pe
 Antes de realizar el proceso de creación del docker, debes descargar desde este enlace https://drive.google.com/file/d/1TQ6NDLRcW_l6Xfw49uhbchUdvAvou3VN/view?usp=sharing el ``train-metadata.csv`` ya que este no puede ser cargado al github se descarga aparte y debes alojarlo en la carpeta donde vayas a utilizar las imagenes que en este caso es training.
 
 Imagen de referencia:
-![image](https://github.com/user-attachments/assets/049737f2-4f8d-4221-bf3c-bf590f7e6271)
 
+![image](https://github.com/user-attachments/assets/049737f2-4f8d-4221-bf3c-bf590f7e6271)
 
 1. Debes crear la imagen de docker, para eso debes estar desde una terminal en la carpeta raiz del proyecto (directorio fase - 3), recuerda tener el modelo en carpeta model o donde prefieras teniendo en cuenta que debes ajustar el path y ejecutar el comando ``*docker build -t api .``  y esperar a que se cree la imagen de docker. Esta API fue creada con FastAPI y en el ``Dockerfile`` se encuentra el proceso de instalación de los requeriments y la exposicion del puerto ``8000``: CMD ["uvicorn", "apirest:app", "--host", "0.0.0.0", "--port", "8000"]
 
-2.Luego de crear el API en Docker, debes ejecutar la imagen de docker con el comando `` docker run -it -p 8000:8000 api`` y luego en la consola ejecutar ``python apirest.py`` para ejecutar el API y instanciar todo lo necesario para usar el endpoint de predict (Dentro de esta API se encuentra el preprocesado de que se le hará a todas las imágenes para ser usadas con el modelo) 
+2. Luego de crear el API en Docker, debes ejecutar la imagen de docker con el comando `` docker run -it -p 8000:8000 api`` y luego en la consola ejecutar ``python apirest.py`` para ejecutar el API y instanciar todo lo necesario para usar el endpoint de predict (Dentro de esta API se encuentra el preprocesado de que se le hará a todas las imágenes para ser usadas con el modelo) 
 
 Una vez ejecutado deberías obtener lo siguiente:
 
 ![image](https://github.com/user-attachments/assets/c654af48-f340-4cb9-94c0-3d2fd533cf6f)
 
-
 3. Para utilizar el endpoint de predict debes ejecutar en otra terminal ``python client.py`` dentro de este script esta el path de la imagen que puedes modificar si quieres probar otras imágenes dentro de este está en endpoint de ``Predict`` y el de ``Train``. Para hacer el training y el predict ``client.py`` dispone de una ruta cada uno, en la del training debe apuntar a un ``.zip`` donde esten las imagenes para realizar el entrenamiento, en el caso del ejemplo solo son 2 y permitirá hacer un sobreentreno.
 
 Tendrás algo similar cuando ejecutes el ``client.py`` mostrando que la API funciona y devuelve las predicciones 
+
 ![image](https://github.com/user-attachments/assets/3f0a2d6b-b522-4254-8d17-f5dfbb50f710)
 
 
